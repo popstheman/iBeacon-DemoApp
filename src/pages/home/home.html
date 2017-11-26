@@ -1,0 +1,53 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      My Beacons
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+  <ion-list no-lines>
+
+    <ion-item>
+      <p>{{this.noBeaconsMessage}}</p>
+    </ion-item>
+    <ion-item *ngFor="let beacon of beacons">
+      <ion-avatar item-left>
+        <img src="https://airnativeextensions.com/images/extensions/icons/ane-beacon-icon.png">
+      </ion-avatar>
+      <h1>Beacon #{{beacon.minor}}</h1>
+      <p>Range: {{beacon.accuracy}}</p>
+      <p>RSSI: {{beacon.rssi}}</p>
+      <p>Major: {{beacon.major}}</p>
+      <p>proximity: {{beacon.proximity}}</p>
+      <p>dormantCounter: {{beacon.dormantCounter}}</p>
+    </ion-item>
+    <hr>
+    <!-- <ion-item>
+      <button  ion-button full (click)="refreshRegionList();">Refresh</button>
+      <button  ion-button full (click)="addBeacon();">Add</button>
+      <button  ion-button full (click)="stopRanging();">Stop Ranging</button>
+    </ion-item> -->
+    <!--<ion-item *ngFor="let beacon of beacons">-->
+      <!--<ion-avatar item-left>-->
+        <!--<img src="https://airnativeextensions.com/images/extensions/icons/ane-beacon-icon.png">-->
+      <!--</ion-avatar>-->
+      <!--<ion-grid>-->
+        <!--<ion-row>-->
+          <!--<ion-col>Major</ion-col>-->
+          <!--<ion-col>{{beacon.major}}</ion-col>-->
+        <!--</ion-row>-->
+        <!--<ion-row>-->
+          <!--<ion-col>Minor</ion-col>-->
+          <!--<ion-col>{{beacon.minor}}</ion-col>-->
+        <!--</ion-row>-->
+        <!--<ion-row>-->
+          <!--<ion-col>RSSI</ion-col>-->
+          <!--<ion-col>{{beacon.rssi}}</ion-col>-->
+        <!--</ion-row>-->
+      <!--</ion-grid>-->
+    <!--</ion-item>-->
+
+  </ion-list>
+</ion-content>

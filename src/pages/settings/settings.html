@@ -1,0 +1,30 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>Regions</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-fab bottom right>
+     <button ion-fab (click)="openAddBeaconModal();"><ion-icon name="add"></ion-icon></button>
+   </ion-fab>
+ <!--  <ion-item><h1>Monitored Regions</h1>
+  <button ion-button (click)="refreshRegionList()" item-right><ion-icon name="refresh"></ion-icon></button>
+  </ion-item>
+  <ion-item *ngFor="let reigon of monitoredRegions">
+      <p>Beacon #{{reigon.identifier}}</p>
+      <p>UUID: {{reigon.uuid}}</p>
+      <p>Major: {{reigon.major}}</p>
+      <p>Minor: {{reigon.minor}}</p>
+    </ion-item> -->
+  <ion-item><h1>Ranged Regions</h1>
+  <button ion-button (click)="refreshRegionList()" item-right><ion-icon name="refresh"></ion-icon></button>
+  </ion-item>
+  <ion-item *ngFor="let reigon of rangedRegions">
+    <button ion-button (click)="copyUUID(reigon.uuid)" item-right><ion-icon name="copy"></ion-icon></button>
+      <p style="word-wrap: break-word">Beacon #{{reigon.identifier}}</p>
+      <p>UUID: {{reigon.uuid}}</p>
+      <p>Major: {{reigon.major}}</p>
+      <p>Minor: {{reigon.minor}}</p>
+    </ion-item>
+</ion-content>

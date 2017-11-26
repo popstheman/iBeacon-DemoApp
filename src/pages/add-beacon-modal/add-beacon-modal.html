@@ -1,0 +1,46 @@
+<!--
+  Generated template for the AddBeaconModalPage page.
+
+  See http://ionicframework.com/docs/v2/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>addBeaconModal</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+	<ion-list>
+		<ion-item>
+			<h2>New Beacon</h2>
+			<button (click)="defaultValues()" ion-button item-right><ion-icon name="briefcase"></ion-icon></button>
+		</ion-item>
+		<ion-item>
+			<ion-label color="primary" stacked>Identifier</ion-label>
+			<ion-input [(ngModel)]="identifier"></ion-input>
+		</ion-item>
+		<ion-item>
+		<ion-label color="primary" stacked>UUID</ion-label>
+			<ion-input [(ngModel)]="uuid"></ion-input>
+		</ion-item>
+		<ion-item>
+		<ion-label color="primary" stacked>Major</ion-label>
+			<ion-input [(ngModel)]="major" type="number" ></ion-input>
+		</ion-item>
+		<ion-item>
+		<ion-label color="primary" stacked>Minor</ion-label>
+			<ion-input [(ngModel)]="minor" type="number" ></ion-input>
+		</ion-item>
+		<ion-item>
+			<ion-label color="primary" stacked>Message</ion-label>
+			<ion-textarea [(ngModel)]="message"></ion-textarea>
+		</ion-item>
+		<ion-item>
+			<button ion-button full secondary (click)="addBeacon();">Add Beacon</button>
+		</ion-item>
+	</ion-list>
+</ion-content>
